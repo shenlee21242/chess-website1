@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Master - Play Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <div class="logo-img">♛</div>
+                    <span class="logo-text">ChessMaster</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#game-section">Play</a></li>
+                    <li><a href="#learn">Learn</a></li>
+                    <li><a href="#community">Community</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="hero-section">
+                <div class="hero-content">
+                    <h1>Welcome to Chess World</h1>
+                    <p>Play, Learn, and Challenge Players Worldwide</p>
+                    <button class="cta-button" id="startPlaying">Start Playing</button>
+                </div>
+            </section>
+
+            <section id="game-section" class="game-section">
+                <div class="game-header">
+                    <h2>Chess Board</h2>
+                    <div class="game-info">
+                        <div id="currentPlayer">Current Player: White</div>
+                        <div id="gameStatus">Game Status: Playing</div>
+                        <div id="playerScore">White: 0 | Black: 0</div>
+                    </div>
+                </div>
+
+                <div class="chess-container">
+                    <div id="chessBoard" class="chess-board"></div>
+                    <div class="game-controls">
+                        <button id="newGame">New Game</button>
+                        <button id="undoMove">Undo Move</button>
+                        <button id="flipBoard">Flip Board</button>
+                        <button id="showHints">Show Hints</button>
+                        <button id="playWithAI">Play with AI</button>
+                    </div>
+                </div>
+                
+                <div class="captured-pieces">
+                    <h3>Captured Pieces</h3>
+                    <div class="captured-container">
+                        <div class="captured-side">
+                            <span>White Captured:</span>
+                            <div id="whiteCaptured" class="captured white-captured"></div>
+                        </div>
+                        <div class="captured-side">
+                            <span>Black Captured:</span>
+                            <div id="blackCaptured" class="captured black-captured"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="piece-values">
+                    <h3>Piece Values (C.E.S System)</h3>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <span class="piece-symbol white">♔</span>
+                            <span>King = ○○ (Infinite)</span>
+                        </div>
+                        <div class="value-item">
+                            <span class="piece-symbol white">♕</span>
+                            <span>Queen = 9</span>
+                        </div>
+                        <div class="value-item">
+                            <span class="piece-symbol white">♖</span>
+                            <span>Rook = 5</span>
+                        </div>
+                        <div class="value-item">
+                            <span class="piece-symbol white">♗</span>
+                            <span>Bishop = 3</span>
+                        </div>
+                        <div class="value-item">
+                            <span class="piece-symbol white">♘</span>
+                            <span>Knight = 3</span>
+                        </div>
+                        <div class="value-item">
+                            <span class="piece-symbol white">♙</span>
+                            <span>Pawn = 1</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 ChessMaster. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/pieces.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/ai.js"></script>
+</body>
+</html>
